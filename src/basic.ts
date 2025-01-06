@@ -28,3 +28,28 @@ let currentUser: User = {
 };
 
 let status: "active" | "inactive" | "banned" = "active";
+
+// Define the User interface
+interface User {
+  id: number;
+  name: string;
+  age: number;
+  role: string;
+}
+
+// Define the displayUserInfo function
+function displayUserInfo(user: User) {
+  console.log(
+    `codeUser Info: ID: ${user.id} Name: ${user.name} Age: ${user.age} Role: ${user.role}`
+  );
+}
+
+// Example usage:
+const user: User = {
+  id: 1,
+  name: "John Doe",
+  age: 30,
+  role: "Admin",
+};
+
+displayUserInfo(user);
